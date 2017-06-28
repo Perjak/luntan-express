@@ -1,0 +1,110 @@
+.content{
+    width: 1000px;
+    background-color: #abef98;
+}
+.content-wrap{
+    font-size: 14px;
+    border-bottom: 1px solid;
+    height: 24px;
+
+}
+.content-wrap a{
+    color: #122b40;
+    line-height: 24px;
+    padding: 0 5px;
+}
+.num{
+    height: 24px;
+}
+.message{
+    height: 40px;
+    margin-top: 5px;
+
+}
+.message a{
+    display: block;
+    height: 30px;
+    width: 50px;
+    line-height: 30px;
+    text-align: center;
+    color: whitesmoke;
+    background-color: #00a2d4;
+}
+.content-post{
+    height: 25px;
+    border:1px lightslategrey solid;
+}
+.item-times{
+    float: right;
+}
+.all-item{
+    margin-top: 20px;
+    height: 130px;
+}
+.item-text{
+    width: 80px;
+    height: 90px;
+    padding: 10px;
+}
+.content2{
+    width: 600px;
+    height: 90px;
+    padding: 20px 10px;
+}
+.item-times{
+    width: 80px;
+    height: 90px;
+    padding: 10px;
+}
+.qaq{
+    height: 200px;
+}
+.pl{
+
+}
+.bot{
+    width: 1000px;
+    height: 150px;
+    border: 1px solid;
+    margin-top: 20px;
+    background-color: seashell;
+}
+.plyuan{
+    border: 1px solid;
+    width: 100px;
+    height: 120px;
+    margin: 10px;
+    text-align: center;
+}
+.plyuan em{
+    background: url(/images/jutou.png);
+    display: block;
+    margin: 5px auto;
+    width: 80px;
+    height: 80px;
+}
+.plneir{
+    width: 600px;
+    height: 120px;
+    margin: 10px;
+}
+.plneir span{
+    display: block;
+    width: 580px;
+    height: 100px;
+}
+.kl{
+    margin-top: 10px;
+}
+#aa{
+    width: 48px;
+    height: 30px;
+    line-height: 20px;
+    font-size: 16px;
+    text-align: center;
+    cursor:pointer;
+    margin-top: 10px;
+    background-color:#00a2d4;
+    color: whitesmoke;
+    border: hidden;
+}

@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*list-style: none;*/
+}
+.header{
+    width: 1200px;
+    margin: 0 auto;
+    height: 110px;
+    background-color: #00B7FF;
+    clear: both;
+}
+.log i{
+    margin-top: 10px;
+    display: block;
+    width: 347px;
+    height: 85px;
+    float: left;
+    background: url(/images/warriors-logo.png);
+}
+.title4{
+    font-size: 24px;
+    float: left;
+    margin-top: 35px;
+    height: 40px;
+    line-height: 40px;
+    padding:  0 5px;
+}
+.ko{
+    font-size: 18px;
+    color: whitesmoke;
+    float: right;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 40px;
+    padding: 0 10px;
+}
+.ko a{
+    color: #666666;
+    text-decoration: none;
+}
+.box{
+    width: 100%;
+}
+.menu{
+    width: 155px;
+    height: 400px;
+    border: solid 1px;
+    float: left;
+}
+.content{
+    float: left;
+    width: 805px;
+    height: 400px;
+    border: 1px solid saddlebrown;
+}
+iframe{
+    width: 400px;
+    height: 400px;
+    border: 1px solid;
+    float: left;
+
+}

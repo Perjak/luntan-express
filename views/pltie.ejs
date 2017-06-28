@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/base.css">
+    <link rel="stylesheet" href="/stylesheets/pl.css">
+    <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="/javascripts/jquery-3.1.1.min.js"> </script>
+</head>
+<body>
+<%include header.ejs%>
+<div class="box w">
+    <div class="content">
+        <div class="content1">
+            <div class="content-wrap">
+                <a href="#">首页</a>
+                <em> > </em>
+                <a href="#"><%=bk.name%></a>
+                <em> > </em>
+                <a href="#"><%=bk_theme.name%></a>
+                <em> > </em>
+                <a href="#"><%=tiezi.title%></a>
+            </div>
+            <div class="message">
+                <a href="/fa/<%=bk_theme.id%>" target="fatie">发帖</a>
+            </div>
+            <div class="content-all">
+                <div class="all-item">
+                    <div class="item-text fl">
+                        <span>楼主：<%=username%></span>
+                    </div>
+                    <div class="content2 fl">
+                        <a href="#"><%-tiezi.content%></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%for(var i=0;i<pilun.length;i++){%>
+<%if(pilun[i].tieid=tiezi.id){%>
+<div class="w">
+    <div class="bot">
+        <div class="plyuan fl">
+            <em></em>
+            <span>层主：<%=plrows[i].name%></span>
+        </div>
+        <div class="plneir fl">
+            <span><%-pilun[i].neirong%></span>
+            <p>评论时间：<%=pilun[i].date%></p>
+        </div>
+    </div>
+</div>
+<%}%>
+<%}%>
+<div class="w">
+    <div class="kl" >
+        <script id="editor" type="text/plain" style="width:1000px;height:200px;"></script>
+        <input type="button" id="aa" value="评论">
+    </div>
+</div>
+<script>
+    var ue =UE.getEditor('editor');
+
+    $("#aa").on('click',function(){
+        var date=new Date()
+        var c=UE.getEditor('editor').getContent();
+        console.log({content:c,tieid:<%=tiezi.id%>});
+        $.ajax({
+            type:'post',
+            url:"/plun",
+            data:{content:c,tieid:<%=tiezi.id%>,plsj:date},
+            success:function(data){
+                window.location.href="/pl/"+<%=tiezi.id%>
+            }
+        })
+    })
+</script>
+</body>
+</html>

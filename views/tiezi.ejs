@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/base.css">
+    <link rel="stylesheet" href="/stylesheets/tiezi.css">
+</head>
+<body>
+<%include header.ejs %>
+<div class="box w">
+    <div class="content">
+        <div class="content1">
+            <div class="content-wrap">
+                <a href="#">首页</a>
+                <em> > </em>
+                <a href="#"><%=bk.name%></a>
+                <em> > </em>
+                <a href="#"><%=bk_theme.name%></a>
+            </div>
+            <div class="content-top">
+                <div class="name">
+                    <h3><%=bk_theme.name%></h3>
+                </div>
+                <div class="num clearfix">
+                    <ul>
+                        <li class="fl">今日：
+                            <em>0</em>
+                        </li>
+                        <li class="fl">
+                            主题：
+                            <em><%=tiezi.length%></em>
+                        </li>
+                        <li class="fl">
+                            总贴:
+                            <em><%=tiezi.length%></em>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-host">
+                    <a href="#">浩瀚の星空</a>
+                    <span>零距离接触，公布官方动态</span>
+                </div>
+                <div class="message">
+                    <a href="/fa/<%=bk_theme.id%>" target="fatie" id="ft">发帖</a>
+                </div>
+                <div class="content-post">
+                    <a href="#">全部</a>
+                    <a href="#">精华</a>
+                    <a href="#">会员</a>
+                </div>
+                <%for(var i=0;i<tiezi.length;i++){%>
+                <div class="content-all">
+                    <div class="all-item">
+                        <div class="item-text fl">
+                            <em></em>
+                            <span>楼主：<%=username[i].name%></span>
+                        </div>
+                        <div class="content2 fl">
+                            <a href="/pl/<%=tiezi[i].id%>"><%= tiezi[i].title%></a>
+                            <p>发表时间：<%=tiezi[i].date%></p>
+                        </div>
+                        <div class="item-times fr">
+                            <span>浏览:num</span>
+                            <span>回复:num</span>
+                        </div>
+                    </div>
+                </div>
+
+                <%}%>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="w qaq">
+    <iframe width="1000px" height="600px" src="" frameborder="0" name="fatie"></iframe>
+</div>
+<div style="width:350px;margin:0 auto;">
+    <ul class="pagination" id="pagination1"></ul>
+</div>
+<% include footer.ejs%>
+<script src="/javascripts/jquery-3.1.1.min.js"></script>
+<script src="/javascripts/jqPaginator.js"></script>
+<script>
+    $("#ft").click(function(){
+        $(".qaq").show();
+    })
+    $.jqPaginator('#pagination1', {
+        totalPages: 100,
+        visiblePages: 3,
+        currentPage: 3,
+        onPageChange: function (num, type) {
+            $('#p1').text(type + '：' + num);
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+.login{
+    height: 400px;
+    margin-top: 40px;
+}
+.login-tel{
+    height: 40px;
+    border: 1px solid gainsboro;
+   font-size: 20px;
+    line-height: 40px;
+    padding: 0 10px;
+}
+.login-form{
+    width: 1000px;
+    padding: 30px 5px;
+}
+.tips{
+    margin: 10px;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    width: 800px;
+    border: 1px solid;
+}
+.login-input{
+    height: 200px;
+    padding: 0 5px;
+}
+.login-input span{
+    font-size: 18px;
+}
+.name{
+    line-height: 75px;
+    height: 75px;
+}
+.name input{
+    height: 20px;
+}
+.sub{
+    height: 30px;
+    font-size: 16px;
+    padding: 5px  20px;
+    background-color:#4843ff;
+    border: hidden;
+}
+.right-tips{
+    width: 180px;
+    height: 100px;
+    margin-top: 30px;
+}
+.right-tips span{
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+}
+.right-tips button{
+    font-size: 16px;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 10px;
+}

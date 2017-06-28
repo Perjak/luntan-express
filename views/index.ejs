@@ -1,0 +1,59 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/base.css">
+  <link rel="stylesheet" href="/stylesheets/index.css">
+</head>
+<body>
+<% include header.ejs %>
+<!--计数内容-->
+<div class="num w">
+  <div class="num-count">
+    <ul>
+      <li>今日：num</li>
+      <li>昨日：num</li>
+      <li>最高日：num</li>
+      <li>帖子：num</li>
+      <li>会员：num</li>
+      <li>新会员：name</li>
+    </ul>
+  </div>
+</div>
+<!--计数结束-->
+<!--分区详情-->
+
+<div class="content w">
+  <%for(var i=0;i<bk.length;i++){%>
+  <div class="part w ">
+    <div class="part-offical">
+      <div class="part-title">
+        <h4><%=bk[i].name%></h4>
+      </div>
+    </div>
+    <!--<div class="part-content clearfix">-->
+      <%for( var j=0;j<cow.length;j++){%>
+      <%if(cow[j].bk_id==bk[i].id){%>
+      <div class="content-one fl">
+        <div class="content-pic fl">
+          <i></i>
+        </div>
+        <div class="content-info fl">
+          <a href="/yan/<%=cow[j].id%>"><%=cow[j].name%></a>
+          <span>主题：num,帖子：num</span>
+          <span>最后回复：2017-04-17 16:27</span>
+        </div>
+      </div>
+      <%}%>
+      <%}%>
+    <!--</div>-->
+  </div>
+  <%}%>
+</div>
+
+<!--分区结束-->
+<% include footer.ejs %>
+</body>
+</html>

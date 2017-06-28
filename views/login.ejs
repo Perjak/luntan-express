@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/base.css">
+    <link rel="stylesheet" href="/stylesheets/login.css">
+</head>
+<body>
+<% include header.ejs %>
+<div class="login w">
+    <div class="login-tel">
+        <span>登录</span>
+    </div>
+    <div class="login-wt clearfix">
+        <div class="login-form fl">
+            <div class="tips">
+                <span>请登录后在浏览</span>
+            </div>
+            <div class="login-input">
+                <form action="/check">
+                    <div class="name">
+                        <span>姓名：</span>
+                        <input type="text" name="username">
+                    </div>
+                    <div class="name">
+                        <span>密码：</span>
+                        <input type="password" name="pwd">
+                    </div>
+                    <input type="submit" value="提交" class="sub">
+                </form>
+            </div>
+        </div>
+        <div class="right-tips fr">
+            <span>还没有账号？</span>
+            <button>免费注册</button>
+        </div>
+    </div>
+</div>
+<% include footer.ejs %>
+</body>
+</html>

@@ -1,0 +1,80 @@
+.content{
+    width: 1000px;
+    background-color: #abef98;
+}
+.content .content-wrap{
+    font-size: 14px;
+    border-bottom: 1px solid;
+    height: 24px;
+}
+.content-wrap a{
+    color: #122b40;
+    line-height: 24px;
+    padding: 0 5px;
+}
+.num{
+    height: 24px;
+}
+.num li{
+    padding:0 5px ;
+}
+.message{
+   height: 40px;
+    margin-top: 5px;
+}
+.message a{
+    display: block;
+    height: 30px;
+    width: 50px;
+    line-height: 30px;
+    text-align: center;
+    color: whitesmoke;
+    background-color: #00a2d4;
+}
+.content-post{
+    height: 25px;
+    border:1px lightslategrey solid;
+}
+.item-times{
+    float: right;
+}
+.all-item{
+    margin-top: 20px;
+    height: 130px;
+}
+
+.item-text{
+    width: 120px;
+    height: 90px;
+    padding: 10px;
+}
+.item-text em{
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: url(/images/js.png) no-repeat;
+}
+.content2{
+    width: 600px;
+    height: 90px;
+    padding: 20px 10px;
+}
+.content2 a{
+    font-size: 16px;
+    display: block;
+    width: 600px;
+    height: 60px;
+    padding: 10px;
+}
+.item-times{
+    width: 80px;
+    height: 90px;
+    padding: 10px;
+}
+.qaq{
+    height: 600px;
+    display: none;
+}
+.content-all{
+    background-color: seashell;
+}

@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.w{
+    width: 1200px;
+    margin: 0 auto;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearfix{
+    clear: both;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/*头部开始*/
+.header{
+    width: 100%;
+    height: 105px;
+    background-color: goldenrod;
+}
+.nav{
+    padding: 10px 0;
+    height: 85px;
+}
+.log a {
+    display: block;
+    width: 347px;
+    height: 85px;
+
+}
+.header .header-nav{
+    width: 550px;
+    height: 85px;
+    padding: 0 40px;
+}
+.header-nav ul li{
+    float: left;
+    font-size: 15px;
+    height: 30px;
+    line-height: 20px;
+    margin: 20px 10px;
+    padding:10px 5px 0 5px ;
+}
+.header-per{
+    height: 85px;
+    margin: 0  50px;
+}
+.header-per i{
+    display: block;
+    width: 23px;
+    height: 24px;
+    float: left;
+    margin: 20px 5px;
+    padding:10px 5px 0 5px ;
+}
+.header-per>a{
+    display: block;
+    float: left;
+    font-size: 15px;
+    height: 20px;
+    line-height: 20px;
+    margin: 20px 5px;
+    padding:10px 5px 0 5px ;
+}
+/*头部结束*/
+/*底部开始*/
+.footer{
+    margin: 10px auto;
+    text-align: center;
+}
+.footer a{
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    padding:0 5px;
+}

@@ -1,0 +1,69 @@
+
+.num{
+    height: 40px;
+}
+.num-count{
+    height: 30px;
+    margin: 10px;
+    background-color: aqua;
+}
+.num-count li{
+    float:left;
+    height: 14px;
+    font-size: 14px;
+    line-height: 14px;
+    color: #606263;
+    border-right: 1px solid;
+    padding: 0 10px;
+    margin: 10px 5px;
+}
+/*计数结束*/
+/*内容开始*/
+.xs{
+    display: none;
+}
+.content{
+    border-bottom:1px solid;
+}
+.part{
+    height: 110px;
+}
+.content-pic{
+    width: 42px;
+    height: 48px;
+    padding: 7px 0;
+}
+.content-pic i{
+    display: block;
+    width: 27px;
+    height: 28px;
+    padding: 10px 5px;
+    background:url(../images/talk.png) no-repeat center;
+}
+.content-info{
+    width: 200px;
+    padding: 5px 5px;
+}
+.content-info a{
+    display: block;
+    font-size: 16px;
+    height: 16px;
+    line-height: 16px;
+}
+.content-info span{
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+}
+.content-one,.content-two,.content-three{
+    width: 260px;
+    height: 50px;
+    margin: 10px 40px;
+}
+.content-info span{
+display: block;
+    height: 18px;
+    line-height: 18px;
+}
+/*分区结束*/
+

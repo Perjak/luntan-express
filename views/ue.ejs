@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="/javascripts/jquery-3.1.1.min.js"> </script>
+    <style>
+        h4{
+            font-size: 14px;
+        }
+        #aa{
+            width: 48px;
+            height: 30px;
+            line-height: 20px;
+            font-size: 16px;
+            text-align: center;
+            cursor:pointer;
+            margin-top: 10px;
+        }
+        #a{
+            width: 400px;
+            height: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<h4>标题:</h4>
+<input type="text" id="a">
+<h4>正文：</h4>
+<script id="editor" type="text/plain" style="width:980px;height:300px;"></script>
+<input type="button" id="aa" value="发布" >
+
+<script>
+    var ue =UE.getEditor('editor');
+    $("#aa").on('click',function(){
+        var title=$("#a").val();
+        var date=new Date();
+        var c=UE.getEditor('editor').getContent();
+        $.ajax({
+            type:'post',
+            url:"/tie",
+            data:{content:c,userid:<%=userid%>,ztid:<%=zd%>,date:date,title:title},
+            success:function(data){
+                top.location.reload();
+            }
+        })
+    })
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

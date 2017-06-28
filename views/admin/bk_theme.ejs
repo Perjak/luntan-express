@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .lian{
+            width: 400px;
+            font-size: 18px;
+            text-align: center;
+            height: 35px;
+        }
+        .lian a{
+            display: block;
+            float: right;
+            text-decoration: none;
+            width: 80px;
+            height: 25px;
+            line-height: 25px;
+            border: 1px solid;
+            padding: 0 5px;
+            background-color: #d7d7d7;
+        }
+        .bg{
+            margin-top: 20px;
+            width: 400px;
+        }
+        table{
+            width: 400px;
+            border-collapse: collapse;
+        }
+        .bg th, .bg td{
+            border:1px solid;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div class="lian">
+    <a href="/admin/addzt">添加主题</a>
+</div>
+<div class="bg">
+    <table>
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>版块id</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <%for(var i=0;i<lt.length;i++){%>
+        <tr>
+            <td><%=lt[i].id%></td>
+            <td><%=lt[i].name%></td>
+            <td><%=lt[i].bk_id%></td>
+            <td><a href="/admin/edit_zt/<%=lt[i].id%>">编辑</a></td>
+
+        </tr>
+        <%}%>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
